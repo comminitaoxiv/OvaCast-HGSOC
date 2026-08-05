@@ -1,0 +1,36 @@
+model:
+  backbone: BioMistral/BioMistral-7B
+  context_length: 32768
+  hidden_size: 4096
+  lora_rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+training:
+  phases:
+    genomic_pretraining: 5
+    multimodal_finetuning: 10
+    explanation_tuning: 3
+  batch_size: 4
+  gradient_accumulation_steps: 8
+  effective_batch_size: 32
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  gradient_clip_norm: 1.0
+  precision: bf16
+  modality_dropout: 0.3
+  explanation_loss_weight: 0.1
+  seeds: [42, 123, 256, 512, 1024]
+data:
+  pathways: 330
+  minimum_pathway_genes: 10
+  top_genes: 3
+  train_fraction: 0.7
+  validation_fraction_within_train: 0.15
+compute:
+  accelerator: NVIDIA A100 80GB
+  devices: 1
+  cuda: "12.1"
+  expected_gpu_hours: 18
+

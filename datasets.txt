@@ -1,0 +1,8 @@
+TCGA-OV | https://portal.gdc.cancer.gov/projects/TCGA-OV
+TCIA OV-Radiogenomics | https://www.cancerimagingarchive.net/collection/tcga-ov/
+GSE26712 | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE26712
+GSE9891 | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE9891
+PTRC-HGSOC | https://www.cancerimagingarchive.net/collection/ptrc-hgsoc/
+KEGG | https://www.kegg.jp/kegg/rest/
+Reactome | https://reactome.org/download-data
+BioMistral-7B | https://huggingface.co/BioMistral/BioMistral-7B
